@@ -8,8 +8,8 @@ from flask import Flask
 #from flask_login import LoginManager
 
 # Importações Internas
-from .routes import main_bp, auth_bp, exec_bp, panel_bp, function_bp, mail_bp
-from .controllers.execucoes_db import ConexaoBanco
+from app.routes import main_bp, auth_bp, exec_bp, panel_bp, function_bp, mail_bp
+from app.controllers.execucoes_db import ConexaoBanco
 
 def create_app():
     app = Flask(__name__)

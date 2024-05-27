@@ -4,7 +4,10 @@ import json
 def get_location_by_address(rua, uf, cep):
     base_url = f"https://nominatim.openstreetmap.org/search?q={cep}%20{uf}%20{rua}&format=json&addressdetails=1"
     
-    response = requests.get(base_url)
+    headers = {
+     'User-Agent': 'MyAppName/1.0 (contact@example.com)'
+    }
+    response = requests.get(base_url, headers=headers)
     print(f"Status Code: {response.status_code}")
     print(f"Response Text: {response.text}")
     if response.status_code == 200:
