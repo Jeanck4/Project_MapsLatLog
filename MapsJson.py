@@ -26,9 +26,9 @@ def save_to_json(data, filename):
         json.dump(data, f, indent=4)
 
 # Dados do endereço
-rua = "ivo petters"
-uf = "SC"
-cep = "89135-000"
+rua = "R. SIQUEIRA CAMPOS"
+uf = "PE"
+cep = "54753-000"
 
 # Obter dados da API
 location_data = get_location_by_address(rua, uf, cep)
